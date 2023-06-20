@@ -1,4 +1,4 @@
-function loadData(){
+function getWeatherData (){
 	const city = document.getElementById('city_input').value;
 	
 	// fetch(`http://api.openweathermap.org/data/2.5/weather?q=Madaripur&APPID=6640fe31d75d8622eeaf76221d0bfa3e`)
@@ -19,14 +19,11 @@ function displayData(data){
 	const postDiv = document.createElement('div');
 	postDiv.innerHTML = `
 		<h2>Weather Information </h2>
-		<h4>Weather OF ${data.name}</h4>
-		<h4>Weather Conditions is  ${data.weather[0].main}</h4>
-		<h4>Country ${data.sys.country}</h4>
-		<h4>Timezone ${data.timezone}</h4>
-		<p>Description ${data.weather[0].description}</p>
-
-		
-
+		<h4>Weather OF:  ${data.name}</h4>
+		<h4>Weather Conditions: ${data.weather[0].main}</h4>
+		<h4>Country :${data.sys.country}</h4>
+		<h4>Timezone: ${data.timezone}</h4>
+		<p>Description: ${data.weather[0].description}</p>
 	`;
 
 	weatherContainer.appendChild(postDiv);

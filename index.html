@@ -10,14 +10,15 @@
 </head>
 <body>
 	<div class="container">
+		
 		<div class="w-50 mx-auto mt-5 mb-5">
+			<h3 class="text-center ">Check Your Place Weather</h3>
 			<input type="text" class="form-control" placeholder="Enter Your City Name" id="city_input">
-			<button class="btn btn-primary w-50 mt-2" onclick="loadData()">Click</button>
+			<button class="btn btn-primary w-50 mt-2" onclick="getWeatherData()">Submit</button>
 		</div>
 
-
-			<section id="weatherContainer" class="card mx-auto m-5">
-	
+			<h2 class="text-warning">Your Weather Output:</h2>
+			<section id="weatherContainer" class="card mx-auto">
 			</section>
 	
 	</div>
